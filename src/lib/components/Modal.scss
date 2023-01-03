@@ -44,5 +44,35 @@
     padding: 1rem;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
+    h5 {
+      font-size: x-large;
+    }
+  }
+  .btn-close {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 50px;
+      background-color: rgb(156, 156, 156);
+      left: 50%;
+    }
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+      z-index: 1;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      top: 0;
+      z-index: 1;
+    }
   }
 }

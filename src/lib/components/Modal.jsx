@@ -25,24 +25,47 @@ function Modal({ isOpen, close, children, className }) {
 Modal.propTypes = {
   isOpen: PropTypes.bool,
   close: PropTypes.func,
-  children: PropTypes.element,
+  children: PropTypes.any,
   className: PropTypes.string,
 };
 
 /**
  * ModalHeader, this is the header of the modal
  * @param {Object} props
+ * (className: string) ==> className styles
+ * (children: element) ==> childchild element
+ * (title: string)     ==> modal title
+ * (close: function)   ==> close Modal
  * @returns JSX Element
  */
-function ModalHeader({ className }) {
+function ModalHeader({ className, children, title, close }) {
+  const Button = () => (
+    <button
+      onClick={() =>
+        close ? close() : console.log('the function close is missing')
+      }
+      type="button"
+      className="btn-close"
+    ></button>
+  );
   return (
     <header className={className ? className + 'modal-header' : 'modal-header'}>
-      Header
+      {children ? (
+        children
+      ) : (
+        <>
+          <h5 className="modal-title">{title ? title : ''}</h5>
+          <Button />
+        </>
+      )}
     </header>
   );
 }
 ModalHeader.propTypes = {
   className: PropTypes.string,
+  children: PropTypes.any,
+  title: PropTypes.string,
+  close: PropTypes.func,
 };
 
 export { Modal, ModalHeader };

@@ -12,7 +12,7 @@ export default function App() {
         Show Modal
       </button>
       <Modal isOpen={openModal} className="modal-cadetblue" close={closeModal}>
-        <ModalHeader />
+        <ModalHeader title="Header" close={closeModal} />
         Hello this my modal TEST
       </Modal>
     </div>
