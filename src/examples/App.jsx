@@ -10,7 +10,9 @@ export default function App() {
       <button className="btn btn-primary" onClick={() => setOpenModal(true)}>
         Show Modal
       </button>
-      <Modal isOpen={openModal} close={closeModal} />
+      <Modal isOpen={openModal} close={closeModal}>
+        Hello this my modal TEST
+      </Modal>
     </div>
   );
 }
