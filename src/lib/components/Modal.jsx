@@ -73,7 +73,7 @@ ModalHeader.propTypes = {
  * (className: string) ==> className styles
  * (children: element) ==> childchild element
  * @param {Object} props
- * @returns
+ * @returns JSX Element
  */
 function ModalBody({ className, children }) {
   const classModalBody = `modal-body ${className ? className : ''}`;
