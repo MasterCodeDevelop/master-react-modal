@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, ModalHeader } from '../lib/index';
+import { Modal, ModalHeader, ModalBody } from '../lib/index';
 import './App.scss';
 
 export default function App() {
@@ -13,7 +13,12 @@ export default function App() {
       </button>
       <Modal isOpen={openModal} className="modal-cadetblue" close={closeModal}>
         <ModalHeader title="Header" close={closeModal} />
-        Hello this my modal TEST
+        <ModalBody>
+          Hello this my modal
+          <br />
+          <br />
+          <a href="https://github.com/MasterCodeDevelop">MasterCodeDevelop</a>
+        </ModalBody>
       </Modal>
     </div>
   );

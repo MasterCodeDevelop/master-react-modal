@@ -68,4 +68,20 @@ ModalHeader.propTypes = {
   close: PropTypes.func,
 };
 
-export { Modal, ModalHeader };
+/**
+ * ModalBody, this is the body of the modal
+ * (className: string) ==> className styles
+ * (children: element) ==> childchild element
+ * @param {Object} props
+ * @returns
+ */
+function ModalBody({ className, children }) {
+  const classModalBody = `modal-body ${className ? className : ''}`;
+  return <div className={classModalBody}>{children}</div>;
+}
+ModalBody.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.any,
+};
+
+export { Modal, ModalHeader, ModalBody };
