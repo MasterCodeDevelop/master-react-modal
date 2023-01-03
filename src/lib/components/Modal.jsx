@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 /**
  * Modal, this is modal container.
- * @param {JSON} props
+ * @param {Object} props
  * (isOpen: boolean)   ==> modal state to show or not
  * (close: function)   ==> close Modal
  * (children: element) ==> childchild element
@@ -29,4 +29,20 @@ Modal.propTypes = {
   className: PropTypes.string,
 };
 
-export { Modal };
+/**
+ * ModalHeader, this is the header of the modal
+ * @param {Object} props
+ * @returns JSX Element
+ */
+function ModalHeader({ className }) {
+  return (
+    <header className={className ? className + 'modal-header' : 'modal-header'}>
+      Header
+    </header>
+  );
+}
+ModalHeader.propTypes = {
+  className: PropTypes.string,
+};
+
+export { Modal, ModalHeader };

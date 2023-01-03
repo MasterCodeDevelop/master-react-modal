@@ -36,4 +36,13 @@
     border-radius: 2rem;
     outline: 0;
   }
+  &-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
 }
