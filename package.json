@@ -1,7 +1,25 @@
 {
-  "name": "app",
+  "name": "master-react-modal",
+  "description": "A simple and basic reusable modal component using react",
+  "author": "MasterCodeDevelop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterCodeDevelop/master-react-modal.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "modal",
+    "master"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,9 +32,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf dist",
+    "build": "npm clean -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "eslint": "^8.31.0",
     "eslint-plugin-react": "^7.31.11"
   }
