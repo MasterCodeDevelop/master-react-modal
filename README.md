@@ -28,7 +28,7 @@ pnpm add master-react-modal
 ## Example (classic)
 
 ```js
-import { Datepicker } from 'master-react-modal';
+import { Modal, ModalHeader, ModalBody } from 'master-react-modal';
 import { useState } from 'react';
 
 const Example = () => {
