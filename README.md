@@ -51,6 +51,10 @@ const Example = () => {
 export default Example;
 ```
 
+## 💻 See the demo
+
+open [master-react-modal](https://mastercodedevelop.github.io/master-react-modal/).
+
 ## 📚 Technology used
 
 - [NPM](https://www.npmjs.com)
